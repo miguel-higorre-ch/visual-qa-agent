@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "📄 Source of Truth Document"
+    url: https://github.com/miguel-higorre-ch/visual-qa-agent/blob/main/VisualQA-Agent-Source-of-Truth.md
+    about: "Before creating an issue, review the project's vision, scope, and prioritized backlog"
