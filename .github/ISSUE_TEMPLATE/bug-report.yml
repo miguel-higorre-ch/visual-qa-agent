@@ -1,0 +1,68 @@
+name: "🐛 Bug Report"
+description: "Report a bug found during development or end-to-end testing"
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: severidad
+    attributes:
+      label: Severity
+      description: "Use the same classification that the agent applies to visual diffs"
+      options:
+        - "critical — breaks functionality or usability"
+        - "minor — visible but not blocking"
+        - "cosmetic — no functional impact"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: componente
+    attributes:
+      label: Affected component
+      options:
+        - App demo
+        - Playwright / capture
+        - S3
+        - Lambda / orchestration
+        - Prompt / Bedrock (invalid JSON, misclassification, etc.)
+        - Dashboard / bounding boxes
+        - API Gateway
+        - Deploy / infra
+    validations:
+      required: true
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Bug description
+      placeholder: "What you expected to happen vs. what actually happened"
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Upload baseline image X
+        2. Upload current image Y
+        3. Run analysis
+        4. See error / incorrect result
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidencia
+    attributes:
+      label: Screenshot / log / response JSON
+      description: "Paste the error, the JSON returned by Bedrock, or attach an image"
+    validations:
+      required: false
+
+  - type: input
+    id: entorno
+    attributes:
+      label: Environment
+      placeholder: "local / public deploy, browser, AWS region, etc."
+    validations:
+      required: false
