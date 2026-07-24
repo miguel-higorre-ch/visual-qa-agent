@@ -1,0 +1,14 @@
+{
+  "name": "visual-qa-demo-app",
+  "version": "1.0.0",
+  "description": "Demo application for Visual QA Agent testing",
+  "scripts": {
+    "start:baseline": "npx http-server baseline -p 3000",
+    "start:current": "npx http-server current-with-bugs -p 3001",
+    "start": "npm-run-all --parallel start:baseline start:current"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "npm-run-all": "^4.1.5"
+  }
+}

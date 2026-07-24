@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build outputs
+dist/
+build/
+*.log
+
+# AWS
+.aws-sam/
+samconfig.toml
+
+# Screenshots
+screenshots/
+baseline/
+current/
+test-results/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Amplify
+amplify/
+.amplify/
+
+# Coverage
+coverage/
+.nyc_output/

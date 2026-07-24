@@ -1,0 +1,18 @@
+{
+  "name": "visual-qa-playwright",
+  "version": "1.0.0",
+  "description": "Screenshot capture automation for Visual QA Agent",
+  "scripts": {
+    "capture": "node capture.js",
+    "capture:baseline": "node capture.js --baseline",
+    "capture:current": "node capture.js --current",
+    "upload": "node upload-to-s3.js"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.40.0",
+    "playwright": "^1.40.0",
+    "@aws-sdk/client-s3": "^3.470.0",
+    "@aws-sdk/lib-storage": "^3.470.0",
+    "dotenv": "^16.3.1"
+  }
+}

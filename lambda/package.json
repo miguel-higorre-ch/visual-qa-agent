@@ -1,0 +1,22 @@
+{
+  "name": "visual-qa-lambda",
+  "version": "1.0.0",
+  "description": "AWS Lambda function for Visual QA Agent analysis",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:integration": "jest --testPathPattern=integration",
+    "lint": "eslint src/",
+    "deploy": "aws lambda update-function-code --function-name visual-qa-agent-analyzer --zip-file fileb://function.zip"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.470.0",
+    "@aws-sdk/client-bedrock-runtime": "^3.470.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.56.0",
+    "@types/node": "^20.10.0"
+  }
+}
